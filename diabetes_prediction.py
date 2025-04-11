@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 import numpy as np
 
-pickle_in = open('mod_pkles.pkl', 'rb')
+pickle_in = open('modelpickle.pkl', 'rb')
 load_pk= pickle.load(pickle_in)
 
 def app():
