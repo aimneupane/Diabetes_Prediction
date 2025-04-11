@@ -3,7 +3,8 @@ import pandas as pd
 import pickle
 import numpy as np
 
-load_pk=pickle.load(open("https://github.com/aimneupane/Diabetes_Prediction/blob/main/mod_pkles","rb"))
+with open("mod_pkles", "rb") as f:
+    load_pk = pickle.load(f)
 
 def app():
     st.title("Diabetes prediction")
