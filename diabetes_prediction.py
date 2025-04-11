@@ -3,13 +3,7 @@ import pandas as pd
 import pickle
 import numpy as np
 
-url = "https://raw.githubusercontent.com/aimneupane/Diabetes_Prediction/main/mod_pkles"
-response = requests.get(url)
-
-if response.status_code == 200:
-    load_pk = pickle.load(io.BytesIO(response.content))
-else:
-    print("Failed to load pickle file:", response.status_code)
+load_pk=pickle.load(open("mod_pkles","rb"))
 
 def app():
     st.title("Diabetes prediction")
